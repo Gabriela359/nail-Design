@@ -1,64 +1,278 @@
-body{
-    background-color: #FFF7D1;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  background: linear-gradient(135deg, #fff9e9 0%, #ffe8d6 100%);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: "Quicksand", serif;
 }
 
-main{
-    background-color: #FFB0B0;
-    padding: 5px;
-    border-radius: 10px;
+main {
+  background: linear-gradient(135deg, #ffd4d4 0%, #ffc4b8 100%);
+  padding: 50px 40px;
+  border-radius: 30px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 15px 50px rgba(111, 62, 62, 0.2);
+  animation: fadeIn 0.5s ease;
 }
 
-h1{
-    text-align: center;
-    margin: 0;
-    padding: 0;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-h1, h2, h3{
-    font-family: "Playfair Display", serif;
-    color: #6F3E3E;
+h1 {
+  text-align: center;
+  margin: 0 0 40px 0;
+  padding: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
-p, label, button, input{
-    font-family: "Quicksand", serif;
-    color: #1B1B1B;
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #6f3e3e;
 }
 
-h2>span{
-    font-family: "Quicksand", serif;
-    color: #1B1B1B;
-    font-weight: lighter;
+h2 {
+  font-size: 1.5rem;
+  margin: 30px 0 15px 0;
 }
 
-button{
-    width: 100%;
-    border: none;
-    color:#1B1B1B;
-    font-weight: bold;
-    background-color: #FFD09B;
-    border-radius: 8px;
+h3 {
+  font-size: 1.3rem;
+  margin: 25px 0 15px 0;
+  color: #8b5555;
 }
 
-a{
-    text-decoration: none;
+p,
+label,
+button,
+input {
+  font-family: "Quicksand", serif;
+  color: #2c2c2c;
 }
 
-.btn-volver{
-    font-family: "Quicksand", serif;
-    position: fixed;
-    width: 80px;
-    line-height: 55px;
-    bottom: 30px;
-    right: 30px;
-    background: #FFD09B;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: 4px solid #FF8585;
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0 15px 0;
+  border: 2px solid rgba(111, 62, 62, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Quicksand", serif;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #d97b7b;
+  background: white;
+  box-shadow: 0 4px 15px rgba(217, 123, 123, 0.2);
+  transform: translateY(-2px);
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  accent-color: #d97b7b;
+}
+
+h2 > span {
+  font-family: "Quicksand", serif;
+  color: #2c2c2c;
+  font-weight: 500;
+}
+
+h2 > label {
+  display: inline;
+  color: #6f3e3e;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #ffe5b4 0%, #ffd09b 100%);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(111, 62, 62, 0.15);
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(111, 62, 62, 0.25);
+  background: linear-gradient(135deg, #ffd09b 0%, #ffc080 100%);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.servicios {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.servicios label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.servicios label:hover {
+  background: #fff5e8;
+  border-color: #d97b7b;
+  transform: translateX(5px);
+}
+
+.grupo-personas {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px 0;
+  border: 2px solid rgba(111, 62, 62, 0.1);
+  transition: all 0.3s ease;
+}
+
+.grupo-personas:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 25px rgba(111, 62, 62, 0.1);
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: -10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#pago {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px 0;
+  text-align: center;
+  border: 3px solid #d97b7b;
+  box-shadow: 0 8px 25px rgba(217, 123, 123, 0.2);
+}
+
+.total-pagar {
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn-volver {
+  font-family: "Quicksand", serif;
+  position: fixed;
+  width: 100px;
+  line-height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #ffe5b4 0%, #ffd09b 100%);
+  color: #2c2c2c;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(255, 133, 133, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.btn-volver:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(255, 133, 133, 0.5);
+  background: linear-gradient(135deg, #ffd09b 0%, #ffc080 100%);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 35px 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .grupo-personas {
+    padding: 20px;
+  }
+
+  .btn-volver {
+    width: 90px;
+    line-height: 50px;
+    font-size: 0.85rem;
+  }
 }
